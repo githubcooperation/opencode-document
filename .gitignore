@@ -1,0 +1,9 @@
+node_modules
+docs/.vitepress/cache
+docs/.vitepress/dist
+.DS_Store
+*.log
+
+docs-home-paperclip-style.png
+
+docs-home-paperclip-style.png

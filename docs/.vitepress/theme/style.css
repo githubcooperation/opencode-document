@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --pc-bg: #f6f5f1;
+  --pc-surface: #ffffff;
+  --pc-line: #dbd8cf;
+  --pc-line-strong: #c8c3b6;
+  --pc-text: #1f1f1b;
+  --pc-muted: #6b6a63;
+
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --vp-font-family-mono: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --vp-c-brand-1: #1f1f1b;
+  --vp-c-brand-2: #2a2925;
+  --vp-c-brand-3: #3a3934;
+  --vp-c-brand-soft: rgba(31, 31, 27, 0.08);
+
+  --vp-c-text-1: #1f1f1b;
+  --vp-c-text-2: #4d4b44;
+  --vp-c-text-3: #77756f;
+  --vp-c-bg: var(--pc-bg);
+  --vp-c-bg-soft: #f0eee8;
+  --vp-c-bg-alt: #ece8df;
+  --vp-c-default-soft: #efede6;
+  --vp-c-divider: var(--pc-line);
+  --vp-c-divider-light: #e8e4da;
+
+  --vp-home-hero-name-color: var(--pc-text);
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: radial-gradient(circle at 30% 20%, rgba(60, 58, 50, 0.09), rgba(60, 58, 50, 0));
+  --vp-home-hero-image-filter: blur(52px);
+}
+
+.dark {
+  --pc-bg: #141311;
+  --pc-surface: #1b1916;
+  --pc-line: #302d27;
+  --pc-line-strong: #4a453b;
+  --pc-text: #f3f2ee;
+  --pc-muted: #b0aca2;
+
+  --vp-c-brand-1: #f3f2ee;
+  --vp-c-brand-2: #e3dfd4;
+  --vp-c-brand-3: #c9c2b3;
+  --vp-c-brand-soft: rgba(243, 242, 238, 0.12);
+  --vp-c-text-1: #f3f2ee;
+  --vp-c-text-2: #d4d0c5;
+  --vp-c-text-3: #aaa59b;
+  --vp-c-bg: var(--pc-bg);
+  --vp-c-bg-soft: #191714;
+  --vp-c-bg-alt: #11100e;
+  --vp-c-default-soft: #201d18;
+  --vp-c-divider: var(--pc-line);
+  --vp-c-divider-light: #28241f;
+}
+
+body {
+  background:
+    radial-gradient(circle at 0% -10%, rgba(54, 52, 46, 0.08), transparent 42%),
+    radial-gradient(circle at 100% 0%, rgba(54, 52, 46, 0.06), transparent 36%),
+    var(--pc-bg);
+  color: var(--pc-text);
+}
+
+.Layout {
+  background: transparent;
+}
+
+.VPNav {
+  backdrop-filter: saturate(115%) blur(10px);
+}
+
+.VPNavBar {
+  background: color-mix(in srgb, var(--pc-bg) 86%, transparent);
+  border-bottom: 1px solid var(--pc-line);
+}
+
+.VPNavBar .title,
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.VPHome .name,
+.VPHome .text,
+.VPDoc h1,
+.VPDoc h2,
+.VPDoc h3 {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.VPHome .name {
+  font-size: clamp(3rem, 7.6vw, 5.2rem);
+  line-height: 0.94;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.VPHome .text {
+  font-size: clamp(1.8rem, 4.2vw, 3.15rem);
+  line-height: 1;
+}
+
+.VPHome .tagline {
+  color: var(--pc-muted);
+  max-width: 640px;
+  font-size: 1.03rem;
+}
+
+.VPButton {
+  border-radius: 12px;
+  border: 1px solid var(--pc-line-strong);
+  font-weight: 600;
+}
+
+.VPButton.brand {
+  background: var(--pc-text);
+  color: var(--pc-bg);
+  border-color: var(--pc-text);
+}
+
+.VPButton.brand:hover {
+  background: color-mix(in srgb, var(--pc-text) 90%, white);
+}
+
+.VPButton.alt {
+  background: var(--pc-surface);
+  color: var(--pc-text);
+  border-color: var(--pc-line-strong);
+}
+
+.VPFeatures {
+  padding-top: 14px;
+}
+
+.VPFeature {
+  border: 1px solid var(--pc-line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--pc-surface) 94%, var(--pc-bg));
+  box-shadow: 0 8px 22px rgba(19, 18, 15, 0.04);
+}
+
+.VPFeature .title {
+  color: var(--pc-text);
+  font-weight: 600;
+}
+
+.VPFeature .details {
+  color: var(--pc-muted);
+}
+
+.VPDoc .container {
+  max-width: 860px;
+}
+
+.VPDoc p,
+.VPDoc li {
+  color: var(--vp-c-text-2);
+}
+
+.VPDoc h1 {
+  font-size: clamp(2.25rem, 5vw, 3.3rem);
+  line-height: 1.02;
+  margin-bottom: 14px;
+}
+
+.VPDoc h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+  line-height: 1.08;
+  margin-top: 2.4rem;
+}
+
+.VPDoc div[class*='language-'] {
+  border: 1px solid var(--pc-line);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--pc-surface) 90%, var(--pc-bg));
+}
+
+.VPSidebar {
+  background: transparent;
+}
+
+.VPSidebarItem.is-active > .item .link {
+  background: color-mix(in srgb, var(--pc-text) 8%, transparent);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .VPHome .name {
+    white-space: normal;
+  }
+}
